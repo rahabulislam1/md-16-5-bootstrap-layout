@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Element</title>
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css">
+    <style>
+        h1::before {
+            content: 'before';
+            color: brown;
+        }
+
+        h1::after {
+            content: " AFTER";
+            color: yellow;
+        }
+
+        blockquote::before {
+            content: open-quote;
+            font-size: 1.5em;
+        }
+
+        blockquote::after {
+            content: close-quote;
+            font-size: 1.5em;
+            color: rgb(255, 0, 0);
+        }
+
+        .section-title {
+            display: inline-block;
+        }
+
+        .section-title::after,
+        .section-title:hover::before {
+            content: '';
+            display: block;
+            background-color: magenta;
+            height: 2px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Having fun with pseudo Element</h1>
+    <h1>Having fun with pseudo Element</h1>
+    <section>
+        <h2 class="section-title">Best Quotes</h2>
+        <blockquote>Happyness is only real when it shared </blockquote>
+        <blockquote>Happyness is only real when it shared </blockquote>
+        <blockquote>Happyness is only real when it shared </blockquote>
+    </section>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
